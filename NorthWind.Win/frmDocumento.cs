@@ -63,6 +63,7 @@ namespace NorthWind.Win
             });
             
             //Actualizar DataGrid
+            dataGridView1.DataSource = null;
             dataGridView1.DataSource = oFacturaBL.GetDetalle();
 
             txtsubtotal.Text = oFacturaBL.SubTotal.ToString();

@@ -11,6 +11,11 @@ namespace NorthWind.Entity
         public string CodProducto { get; set; }
         public string Descripcion { get; set; }
         public string Precio { get; set; }
+        //sobreescribiendo el metodo tostring
+        public override string ToString()
+        {
+            return Descripcion;
+        }
 
         public TbProductoBE(
             string  codproducto,
