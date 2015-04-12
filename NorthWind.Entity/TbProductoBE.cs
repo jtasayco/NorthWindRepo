@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NorthWind.Entity
 {
-    public class TbProductoBE
+    public class TbProductoBE:EventArgs
     {
         public string CodProducto { get; set; }
         public string Descripcion { get; set; }
