@@ -17,6 +17,10 @@ namespace NorthWind.Entity
             return Descripcion;
         }
 
+        public TbProductoBE()
+        {
+        }
+        /*
         public TbProductoBE(
             string  codproducto,
             string  descripcion , 
@@ -25,8 +29,8 @@ namespace NorthWind.Entity
             this.CodProducto  =codproducto;
             this.Descripcion = descripcion;
             this.Precio  = precio;        
-        }
-
+        }*/
+        /*
         public static List<TbProductoBE> SelectAll()
         {
             List<TbProductoBE> productos = new List<TbProductoBE>();
@@ -37,6 +41,6 @@ namespace NorthWind.Entity
             
             return productos;
 
-        }
+        }*/
     }
 }

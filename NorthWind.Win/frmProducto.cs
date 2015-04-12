@@ -1,4 +1,5 @@
-﻿using NorthWind.Entity;
+﻿using NorthWind.DAO;
+using NorthWind.Entity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,7 +26,8 @@ namespace NorthWind.Win
 
         private void frmProducto_Load(object sender, EventArgs e)
         {
-            Lista = TbProductoBE.SelectAll();
+            //Lista = TbProductoBE.SelectAll();
+            Lista = TbProductoDAO.SelectAll();
             this.TbProductobindingSource.DataSource = Lista;
             this.dataGridView1.SelectionMode =
                 DataGridViewSelectionMode.FullRowSelect;
@@ -41,7 +43,11 @@ namespace NorthWind.Win
             {
                 if (list.CodProducto == codigoProducto)
                 {
-                    oProducto = new TbProductoBE(list.CodProducto, list.Descripcion, list.Precio);
+                    //oProducto = new TbProductoBE(list.CodProducto, list.Descripcion, list.Precio);
+                    oProducto = new TbProductoBE();
+                    oProducto.CodProducto = list.CodProducto;
+                    oProducto.Descripcion = list.Descripcion;
+                    oProducto.Precio = list.Precio;
                     onProductoSeleccionado(new object(),oProducto);
                 }
             });

@@ -12,6 +12,9 @@ namespace NorthWind.Entity
         public string Nombre { get; set; }
         public string Ruc { get; set; }
 
+        public TbClienteBE(){
+        }
+        /*
         public TbClienteBE(string codcliente,
             string  nombre , 
             string  ruc)
@@ -30,6 +33,6 @@ namespace NorthWind.Entity
             clientes.Add(new TbClienteBE("c004", "Hinojosa","1585658"));            
             return clientes;
 
-        }
+        }*/
     }
 }
