@@ -47,6 +47,12 @@
             this.txtproducto = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.itemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DocumentobindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -54,12 +60,7 @@
             this.txtigv = new System.Windows.Forms.TextBox();
             this.txttotal = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.DocumentobindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.itemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -239,6 +240,46 @@
             this.dataGridView1.Size = new System.Drawing.Size(427, 126);
             this.dataGridView1.TabIndex = 2;
             // 
+            // itemDataGridViewTextBoxColumn
+            // 
+            this.itemDataGridViewTextBoxColumn.DataPropertyName = "Item";
+            this.itemDataGridViewTextBoxColumn.HeaderText = "Item";
+            this.itemDataGridViewTextBoxColumn.Name = "itemDataGridViewTextBoxColumn";
+            this.itemDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // productoDataGridViewTextBoxColumn
+            // 
+            this.productoDataGridViewTextBoxColumn.DataPropertyName = "Producto";
+            this.productoDataGridViewTextBoxColumn.HeaderText = "Producto";
+            this.productoDataGridViewTextBoxColumn.Name = "productoDataGridViewTextBoxColumn";
+            this.productoDataGridViewTextBoxColumn.Width = 155;
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            this.cantidadDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // totalDataGridViewTextBoxColumn
+            // 
+            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
+            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
+            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
+            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
+            this.totalDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // DocumentobindingSource
+            // 
+            this.DocumentobindingSource.DataSource = typeof(NorthWind.Entity.ItemBE);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -296,51 +337,22 @@
             this.button4.Text = "Guardar";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // DocumentobindingSource
+            // button5
             // 
-            this.DocumentobindingSource.DataSource = typeof(NorthWind.Entity.ItemBE);
-            // 
-            // itemDataGridViewTextBoxColumn
-            // 
-            this.itemDataGridViewTextBoxColumn.DataPropertyName = "Item";
-            this.itemDataGridViewTextBoxColumn.HeaderText = "Item";
-            this.itemDataGridViewTextBoxColumn.Name = "itemDataGridViewTextBoxColumn";
-            this.itemDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // productoDataGridViewTextBoxColumn
-            // 
-            this.productoDataGridViewTextBoxColumn.DataPropertyName = "Producto";
-            this.productoDataGridViewTextBoxColumn.HeaderText = "Producto";
-            this.productoDataGridViewTextBoxColumn.Name = "productoDataGridViewTextBoxColumn";
-            this.productoDataGridViewTextBoxColumn.Width = 155;
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            this.precioDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // cantidadDataGridViewTextBoxColumn
-            // 
-            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
-            this.cantidadDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // totalDataGridViewTextBoxColumn
-            // 
-            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
-            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
-            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
-            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
-            this.totalDataGridViewTextBoxColumn.Width = 50;
+            this.button5.Location = new System.Drawing.Point(6, 286);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 48);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Retirar de Factura";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // frmDocumento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(446, 362);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.txttotal);
             this.Controls.Add(this.txtigv);
@@ -353,6 +365,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmDocumento";
             this.Text = "frmDocumento";
+            this.Load += new System.EventHandler(this.frmDocumento_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -397,5 +410,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button5;
     }
 }

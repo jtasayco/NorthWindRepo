@@ -54,22 +54,161 @@ namespace NorthWind.Win
         DocumentoBL oFacturaBL = new DocumentoBL();
         private void button3_Click(object sender, EventArgs e)
         {
-            //Boton Agregar a Factura
+            //validar que exista una cantidad
+
+            if (validaIngreso() == true)
+            {
+                //Boton Agregar a Factura
+                //antes de agregar: 
+                List<ItemBE> oFacturaReciente = new List<ItemBE>();
+                oFacturaReciente = oFacturaBL.GetDetalle();
+                int itemDiferente = 0;
+                if (oFacturaReciente.Count > 0)
+                {
+                    //si ya existen uno o mas registros, buscar en cada uno de ellos para actualizarlo
+
+                    //ItemBE itemEncontrar = (from item in oFacturaReciente.ToArray()
+                    //                        where item.Producto.CodProducto == otmpProducto.CodProducto
+                    //                        select item).Single();
+
+                    oFacturaReciente.ForEach(list =>
+                    {
+                        if (list.Producto.CodProducto == otmpProducto.CodProducto)
+                        {
+                            itemDiferente = 0;
+                            list.Cantidad = list.Cantidad + Convert.ToInt32(txtcantidad.Text);
+                            //oFacturaBL.SubTotal = list.Total;
+                            //list.Precio = list.Precio + Convert.ToDecimal(txtprecio.Text);
+                        }
+                        else
+                        {
+                            itemDiferente = 1;
+                        }
+                    });
+
+                    if (itemDiferente > 0)
+                    {
+                        asignaDetalle();
+                    }
+
+                }
+                else
+                {
+                    asignaDetalle();
+                    /*oFacturaBL.AgregarDetalle(new ItemBE()
+                    {
+                        Cantidad = Convert.ToInt32(txtcantidad.Text),
+                        Precio = Convert.ToDecimal(txtprecio.Text),
+                        Producto = otmpProducto
+                    });*/
+                }
+
+                //Actualizar DataGrid
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = oFacturaBL.GetDetalle();
+
+                txtsubtotal.Text = oFacturaBL.SubTotal.ToString();
+                txtigv.Text = oFacturaBL.IGV.ToString();
+                txttotal.Text = oFacturaBL.Total.ToString();
+
+            }
+        }
+
+        private bool validaIngreso()
+        {
+            bool valor = true;
+
+            if (string.IsNullOrEmpty(txtruc.Text))
+            {
+                MessageBox.Show("Debe de Ingresar el Ruc del Cliente");
+                valor = false;
+                button1.Select();
+            }
+            
+            if (string.IsNullOrEmpty(txtcliente.Text))
+            {
+                MessageBox.Show("Debe de Ingresar el nombre del Cliente");
+                valor = false;
+                button1.Focus();
+            }
+            
+            if (string.IsNullOrEmpty(txtproducto.Text))
+            {
+                MessageBox.Show("Debe de Ingresar la descripcion del Producto");
+                valor = false;
+                button2.Focus();
+            }
+            
+            if (string.IsNullOrEmpty(txtprecio.Text))
+            {
+                MessageBox.Show("Debe de Ingresar el precio del producto");
+                valor = false;
+                button2.Focus();
+            }
+            
+            if (string.IsNullOrEmpty(txtcantidad.Text)){
+                MessageBox.Show("Debe de Ingresar una Cantidad");
+                valor = false;
+                txtcantidad.Focus();
+            }
+            return valor;
+        }
+
+        private void asignaDetalle()
+        {
             oFacturaBL.AgregarDetalle(new ItemBE()
             {
                 Cantidad = Convert.ToInt32(txtcantidad.Text),
                 Precio = Convert.ToDecimal(txtprecio.Text),
                 Producto = otmpProducto
             });
+        }
+        //remover de la factura
+        private void eliminarItemFactura()
+        {
+            List<ItemBE> itemIngresado = new List<ItemBE>();
+            itemIngresado = oFacturaBL.GetDetalle();
+
+            if (itemIngresado.Count > 0)
+            {
+                int i = dataGridView1.CurrentRow.Index;
+                string itemEliminar = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                ItemBE oitemEliminar = (from item in itemIngresado.ToArray()
+                                        where item.Item == Convert.ToInt32(itemEliminar)
+                                        select item).Single();
+                itemIngresado.Remove(oitemEliminar);
+                //actualizando las posiciones de los items
+                int inicializa = 1;
+                itemIngresado.ForEach(list =>
+                {
+                    list.Item = inicializa;
+                    inicializa += 1;
+                });
+
+                //Actualizar DataGrid
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = itemIngresado;
+
+
+            }
+            else
+            {
+                MessageBox.Show("No hay Detalles a Retirar");
+            }
             
-            //Actualizar DataGrid
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = oFacturaBL.GetDetalle();
+        }
 
-            txtsubtotal.Text = oFacturaBL.SubTotal.ToString();
-            txtigv.Text = oFacturaBL.IGV.ToString();
-            txttotal.Text = oFacturaBL.Total.ToString();
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //Elimiar de factura
+            eliminarItemFactura();
+        }
+
+        private void frmDocumento_Load(object sender, EventArgs e)
+        {
+            this.dataGridView1.SelectionMode =
+                DataGridViewSelectionMode.FullRowSelect;
         }
 
     }
