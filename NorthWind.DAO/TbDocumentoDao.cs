@@ -14,7 +14,7 @@ namespace NorthWind.DAO
         //public eEstadoDocumento
         public eEstadoProceso GuardarDocumento(DocumentoBE oDocumentoDTO) { 
             //Guardar Cabecera
-            string codigodocumentogenerado = "";
+            /*string codigodocumentogenerado = "";
             var ConnectionString = @"Data Source=.;Initial Catalog=Northwind;Integrated Security=SSPI";
             using (var conn = new SqlConnection(ConnectionString)) {
                 conn.Open();
@@ -47,6 +47,61 @@ namespace NorthWind.DAO
 
                         command.ExecuteNonQuery();
                     }
+                }
+                conn.Close();
+            }
+            return eEstadoProceso.Correcto;*/
+            //Tipo de guardado dos, por TVP!!
+            //Para asignar el detalle de la cabecera al detalle,
+            //sera necesario obtener el ultimo id de la cabecera y aumentarle 1
+            oDocumentoDTO.Cabecera.CodDocumento = "22";//<- ultimo mas 1
+            var headers = new DataTable();
+            //headers.Columns.Add("coddocumento", typeof(string));
+            headers.Columns.Add("codcliente", typeof(string));
+            headers.Columns.Add("subtotal", typeof(decimal));
+            headers.Columns.Add("igv", typeof(decimal));
+            headers.Columns.Add("total", typeof(decimal));
+            headers.Columns.Add("fechahora", typeof(DateTime));
+            headers.Columns.Add("tipodocumento", typeof(string));
+
+            var details = new DataTable();
+            details.Columns.Add("coddocumento", typeof(int));//
+            details.Columns.Add("codproducto", typeof(int));//
+            details.Columns.Add("precio", typeof(decimal));
+            details.Columns.Add("cantidad", typeof(int));
+            details.Columns.Add("total", typeof(decimal));
+
+            headers.Rows.Add(new Object[]{
+                //oDocumentoDTO.Cabecera.CodDocumento,
+                oDocumentoDTO.Cabecera.Cliente.CodCliente,
+                oDocumentoDTO.Cabecera.SubTotal,
+                oDocumentoDTO.Cabecera.IGV,
+                oDocumentoDTO.Cabecera.Total,
+                oDocumentoDTO.Cabecera.FechaHora,
+                oDocumentoDTO.Cabecera.TipoDocumento
+            });
+
+            foreach(ItemBE item in oDocumentoDTO.Detalle){
+                details.Rows.Add(new object[]{
+                    oDocumentoDTO.Cabecera.CodDocumento,
+                    item.Producto.CodProducto,
+                    item.Precio,
+                    Convert.ToInt32(item.Cantidad),
+                    item.Total,
+                });
+            }
+
+            var ConnectionString = @"Data Source=. ; Initial Catalog= Northwind;Integrated Security=SSPI";
+            using (var conn = new SqlConnection(ConnectionString)) {
+                conn.Open();
+                using (var cmd = new SqlCommand("InsertaDocumento", conn)) {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    var headersParam = cmd.Parameters.AddWithValue("@cabecera_TVP", headers);
+                    var detailsParam = cmd.Parameters.AddWithValue("@detalle_TVP", details);
+
+                    headersParam.SqlDbType = SqlDbType.Structured;
+                    detailsParam.SqlDbType = SqlDbType.Structured;
+                    cmd.ExecuteNonQuery();
                 }
                 conn.Close();
             }

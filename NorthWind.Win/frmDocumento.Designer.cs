@@ -61,6 +61,7 @@
             this.txttotal = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -142,6 +143,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button6);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.txtcantidad);
@@ -158,9 +160,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(320, 12);
+            this.button3.Location = new System.Drawing.Point(349, 12);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 45);
+            this.button3.Size = new System.Drawing.Size(71, 45);
             this.button3.TabIndex = 2;
             this.button3.Text = "Agregar a Factura";
             this.button3.UseVisualStyleBackColor = true;
@@ -348,6 +350,16 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(294, 12);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(49, 45);
+            this.button6.TabIndex = 10;
+            this.button6.Text = "Categoria";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // frmDocumento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -412,5 +424,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }

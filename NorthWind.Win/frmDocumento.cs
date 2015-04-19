@@ -234,5 +234,12 @@ namespace NorthWind.Win
             }
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            frmCategoria frmCategoria = new frmCategoria();
+            frmCategoria.Show();
+
+        }
+
     }
 }

@@ -12,3 +12,8 @@ C:\isil\NorthWindRepo\NorthWind.Entity\bin\Debug\NorthWind.Entity.pdb
 C:\isil\NorthWindRepo\NorthWind.Entity\obj\Debug\NorthWind.Entity.csprojResolveAssemblyReference.cache
 C:\isil\NorthWindRepo\NorthWind.Entity\obj\Debug\NorthWind.Entity.dll
 C:\isil\NorthWindRepo\NorthWind.Entity\obj\Debug\NorthWind.Entity.pdb
+C:\NorthWindRepo\NorthWind.Entity\bin\Debug\NorthWind.Entity.dll
+C:\NorthWindRepo\NorthWind.Entity\bin\Debug\NorthWind.Entity.pdb
+C:\NorthWindRepo\NorthWind.Entity\obj\Debug\NorthWind.Entity.csprojResolveAssemblyReference.cache
+C:\NorthWindRepo\NorthWind.Entity\obj\Debug\NorthWind.Entity.dll
+C:\NorthWindRepo\NorthWind.Entity\obj\Debug\NorthWind.Entity.pdb

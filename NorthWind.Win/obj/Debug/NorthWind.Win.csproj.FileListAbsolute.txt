@@ -59,3 +59,4 @@ C:\NorthWindRepo\NorthWind.Win\obj\Debug\NorthWind.Win.frmDocumento.resources
 C:\NorthWindRepo\NorthWind.Win\obj\Debug\NorthWind.Win.frmProducto.resources
 C:\NorthWindRepo\NorthWind.Win\obj\Debug\NorthWind.Win.Properties.Resources.resources
 C:\NorthWindRepo\NorthWind.Win\obj\Debug\NorthWind.Win.csproj.GenerateResource.Cache
+C:\NorthWindRepo\NorthWind.Win\obj\Debug\NorthWind.Win.frmCategoria.resources
