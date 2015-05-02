@@ -18,7 +18,11 @@ namespace NorthWind.Win
         //agregacion del evento
         public event EventHandler<TbProductoBE> onProductoSeleccionado;
 
-        List<TbProductoBE> Lista = new List<TbProductoBE>();
+        //List<TbProductoBE> Lista = new List<TbProductoBE>();
+        //Generamos 2 Listas Productos - Categoria
+        List<TbProductoBE> listaProducto = new List<TbProductoBE>();
+        List<TbCategoriaBE> listaCategoria = new List<TbCategoriaBE>();
+
         public frmProducto()
         {
             InitializeComponent();
@@ -27,10 +31,18 @@ namespace NorthWind.Win
         private void frmProducto_Load(object sender, EventArgs e)
         {
             //Lista = TbProductoBE.SelectAll();
-            Lista = TbProductoDAO.SelectAll();
-            this.TbProductobindingSource.DataSource = Lista;
-            this.dataGridView1.SelectionMode =
-                DataGridViewSelectionMode.FullRowSelect;
+            //Lista = TbProductoDAO.SelectAll();
+            listaProducto = TbProductoDAO.SelectAll();
+            listaCategoria = TbCategoriaDAO.SelectAll();
+            //this.TbProductobindingSource.DataSource = Lista;
+            //this.dataGridView1.SelectionMode =
+            //    DataGridViewSelectionMode.FullRowSelect;
+            var listJoin = from prod in listaProducto
+                           join cat in listaCategoria on prod.codCategoria equals cat.CodCategoria
+                           select new { codProducto = prod.CodProducto, descripcion = prod.Descripcion, categoria = cat.Nombre, precio = prod.Precio };
+            //this.TbProductobindingSource.DataSource = listJoin.ToList();
+            this.dataGridView1.DataSource = listJoin.ToList();
+            this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
         }
 
@@ -39,19 +51,39 @@ namespace NorthWind.Win
             int i = dataGridView1.CurrentRow.Index;
             String codigoProducto = dataGridView1.Rows[i].Cells[0].Value.ToString();
             TbProductoBE oProducto;
-            Lista.ForEach(list =>
+            //Lista.ForEach(list =>
+            //{
+            //    if (list.CodProducto == codigoProducto)
+            //    {
+            //        //oProducto = new TbProductoBE(list.CodProducto, list.Descripcion, list.Precio);
+            //        oProducto = new TbProductoBE();
+            //        oProducto.CodProducto = list.CodProducto;
+            //        oProducto.Descripcion = list.Descripcion;
+            //        oProducto.Precio = list.Precio;
+            //        onProductoSeleccionado(new object(),oProducto);
+            //    }
+            //});
+            //this.Close();
+            //Se generara otra vez la lista
+            listaProducto = TbProductoDAO.SelectAll();
+            listaCategoria = TbCategoriaDAO.SelectAll();
+            var listJoin = from prod in listaProducto
+                           join cat in listaCategoria on prod.codCategoria equals cat.CodCategoria
+                           select new { codProducto = prod.CodProducto, descripcion = prod.Descripcion, categoria = cat.Nombre, precio = prod.Precio,codCategoria = cat.CodCategoria };
+            listJoin.ToList().ForEach(listaJoin =>
             {
-                if (list.CodProducto == codigoProducto)
+                if (listaJoin.codProducto == codigoProducto)
                 {
-                    //oProducto = new TbProductoBE(list.CodProducto, list.Descripcion, list.Precio);
                     oProducto = new TbProductoBE();
-                    oProducto.CodProducto = list.CodProducto;
-                    oProducto.Descripcion = list.Descripcion;
-                    oProducto.Precio = list.Precio;
-                    onProductoSeleccionado(new object(),oProducto);
+                    oProducto.CodProducto = listaJoin.codProducto;
+                    oProducto.Descripcion = listaJoin.descripcion;
+                    oProducto.Precio = listaJoin.precio;
+                    oProducto.codCategoria = listaJoin.codCategoria;
+                    onProductoSeleccionado(new object(), oProducto);
                 }
             });
             this.Close();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -65,6 +97,31 @@ namespace NorthWind.Win
             {
                 AgregarProductoFactura();
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            listaProducto = TbProductoDAO.SelectAll();
+            listaCategoria = TbCategoriaDAO.SelectAll();
+            var listJoin = from prod in listaProducto
+                           join cat in listaCategoria on prod.codCategoria equals cat.CodCategoria
+                           select new { codProducto = prod.CodProducto, descripcion = prod.Descripcion, categoria = cat.Nombre, precio = prod.Precio,codCategoria = cat.CodCategoria };
+            this.dataGridView1.DataSource = listJoin.ToList();
+        }
+
+        private void btnButton_Click(object sender, EventArgs e)
+        {
+            this.dataGridView1.DataSource = null;
+            listaProducto = TbProductoDAO.SelectAll();
+            listaCategoria = TbCategoriaDAO.SelectAll();
+            var listJoin = from prod in listaProducto
+                           join cat in listaCategoria on prod.codCategoria equals cat.CodCategoria
+                           select new { codProducto = prod.CodProducto, descripcion = prod.Descripcion, categoria = cat.Nombre, precio = prod.Precio, codCategoria = cat.CodCategoria };
+
+            var resultado = (from c in listJoin.ToList()
+                             where c.descripcion.Contains(txtFiltro.Text)
+                             select c).ToList();
+            this.dataGridView1.DataSource = resultado;
         }
 
     }

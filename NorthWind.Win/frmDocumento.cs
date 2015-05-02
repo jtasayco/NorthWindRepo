@@ -169,7 +169,7 @@ namespace NorthWind.Win
         private void eliminarItemFactura()
         {
             //verificamos si existen detalles
-            if (dataGridView1.RowCount > 0)
+            if (oFacturaBL.GetDetalle().Count() > 0)
             {
                 int i = dataGridView1.CurrentRow.Index;
                 string itemEliminar = dataGridView1.Rows[i].Cells[0].Value.ToString();
