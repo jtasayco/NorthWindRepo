@@ -15,7 +15,7 @@ namespace NorthWind.DAO
         public static List<TbProductoBE> SelectAll()
         {
             string ConnectionString = ConfigurationManager.ConnectionStrings["Northwind"].ToString();
-            string sql = "Select CodProducto,Descripcion,precio from TbProducto";
+            string sql = "Select CodProducto,Descripcion,precio, CategoryID from TbProducto";
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
                 connection.Open();
@@ -31,6 +31,7 @@ namespace NorthWind.DAO
                             objProducto.CodProducto = Convert.ToString(reader.GetDecimal(0));
                             objProducto.Descripcion = reader.GetString(1);
                             objProducto.Precio = Convert.ToString(reader.GetDecimal(2));
+                            objProducto.codCategoria = reader.GetInt32(3);
                             Productos.Add(objProducto);
                         }
                     }

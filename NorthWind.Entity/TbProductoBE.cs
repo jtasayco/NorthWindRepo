@@ -11,6 +11,8 @@ namespace NorthWind.Entity
         public string CodProducto { get; set; }
         public string Descripcion { get; set; }
         public string Precio { get; set; }
+        //para relacionarlo con las categorias
+        public int codCategoria { get; set; }
         //sobreescribiendo el metodo tostring
         public override string ToString()
         {

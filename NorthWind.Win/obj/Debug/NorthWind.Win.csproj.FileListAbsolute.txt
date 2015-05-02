@@ -60,3 +60,6 @@ C:\NorthWindRepo\NorthWind.Win\obj\Debug\NorthWind.Win.frmProducto.resources
 C:\NorthWindRepo\NorthWind.Win\obj\Debug\NorthWind.Win.Properties.Resources.resources
 C:\NorthWindRepo\NorthWind.Win\obj\Debug\NorthWind.Win.csproj.GenerateResource.Cache
 C:\NorthWindRepo\NorthWind.Win\obj\Debug\NorthWind.Win.frmCategoria.resources
+C:\isil\NorthWindRepoRev2\NorthWind.Win\bin\Debug\NorthWind.Win.exe.config
+C:\isil\NorthWindRepoRev2\NorthWind.Win\obj\Debug\NorthWind.Win.exe
+C:\isil\NorthWindRepoRev2\NorthWind.Win\obj\Debug\NorthWind.Win.pdb

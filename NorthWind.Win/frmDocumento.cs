@@ -78,6 +78,7 @@ namespace NorthWind.Win
                         {
                             itemDiferente = 0;
                             list.Cantidad = list.Cantidad + Convert.ToInt32(txtcantidad.Text);
+                            //oFacturaBL.ActualizarDetalle(list);
                             //oFacturaBL.SubTotal = list.Total;
                             //list.Precio = list.Precio + Convert.ToDecimal(txtprecio.Text);
                         }
@@ -167,6 +168,32 @@ namespace NorthWind.Win
         //remover de la factura
         private void eliminarItemFactura()
         {
+            //verificamos si existen detalles
+            if (dataGridView1.RowCount > 0)
+            {
+                int i = dataGridView1.CurrentRow.Index;
+                string itemEliminar = dataGridView1.Rows[i].Cells[0].Value.ToString();
+                ItemBE oitemEliminar = (from item in oFacturaBL.GetDetalle().ToArray()
+                                        where item.Item == Convert.ToInt32(itemEliminar)
+                                        select item).Single();
+                oFacturaBL.RetirarDetalle(oitemEliminar);
+                if (oFacturaBL.GetDetalle().Count() > 0)
+                {
+                    int inicializa = 1;
+                    oFacturaBL.GetDetalle().ForEach(list =>
+                    {
+                        list.Item = inicializa;
+                        inicializa += 1;
+                    });
+                    dataGridView1.DataSource = null;
+                    dataGridView1.DataSource = oFacturaBL.GetDetalle();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No hay Detalles a Retirar");
+            }
+
             List<ItemBE> itemIngresado = new List<ItemBE>();
             itemIngresado = oFacturaBL.GetDetalle();
 
