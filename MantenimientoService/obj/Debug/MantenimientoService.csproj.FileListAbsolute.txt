@@ -1,0 +1,12 @@
+C:\northwind\MantenimientoService\bin\Debug\MantenimientoService.dll.config
+C:\northwind\MantenimientoService\bin\Debug\MantenimientoService.dll
+C:\northwind\MantenimientoService\bin\Debug\MantenimientoService.pdb
+C:\northwind\MantenimientoService\obj\Debug\MantenimientoService.csprojResolveAssemblyReference.cache
+C:\northwind\MantenimientoService\obj\Debug\MantenimientoService.dll
+C:\northwind\MantenimientoService\obj\Debug\MantenimientoService.pdb
+C:\northwind\MantenimientoService\bin\Debug\NorthWind.Entity.dll
+C:\northwind\MantenimientoService\bin\Debug\NorthWind.Logic.dll
+C:\northwind\MantenimientoService\bin\Debug\NorthWind.DAO.dll
+C:\northwind\MantenimientoService\bin\Debug\NorthWind.Entity.pdb
+C:\northwind\MantenimientoService\bin\Debug\NorthWind.Logic.pdb
+C:\northwind\MantenimientoService\bin\Debug\NorthWind.DAO.pdb

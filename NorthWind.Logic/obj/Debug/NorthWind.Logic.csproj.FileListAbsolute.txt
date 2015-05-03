@@ -1,0 +1,9 @@
+C:\northwind\NorthWind.Logic\bin\Debug\NorthWind.Logic.dll
+C:\northwind\NorthWind.Logic\bin\Debug\NorthWind.Logic.pdb
+C:\northwind\NorthWind.Logic\obj\Debug\NorthWind.Logic.csprojResolveAssemblyReference.cache
+C:\northwind\NorthWind.Logic\obj\Debug\NorthWind.Logic.dll
+C:\northwind\NorthWind.Logic\obj\Debug\NorthWind.Logic.pdb
+C:\northwind\NorthWind.Logic\bin\Debug\NorthWind.DAO.dll
+C:\northwind\NorthWind.Logic\bin\Debug\NorthWind.Entity.dll
+C:\northwind\NorthWind.Logic\bin\Debug\NorthWind.DAO.pdb
+C:\northwind\NorthWind.Logic\bin\Debug\NorthWind.Entity.pdb

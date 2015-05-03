@@ -76,3 +76,6 @@ C:\isil\NorthWindRepoRev2\NorthWind.Win\obj\Debug\NorthWind.Win.frmDocumento.res
 C:\isil\NorthWindRepoRev2\NorthWind.Win\obj\Debug\NorthWind.Win.frmProducto.resources
 C:\isil\NorthWindRepoRev2\NorthWind.Win\obj\Debug\NorthWind.Win.Properties.Resources.resources
 C:\isil\NorthWindRepoRev2\NorthWind.Win\obj\Debug\NorthWind.Win.csproj.GenerateResource.Cache
+C:\northwind\NorthWind.Win\obj\Debug\NorthWind.Win.frmCategoria.resources
+C:\northwind\NorthWind.Win\bin\Debug\NorthWind.Logic.dll
+C:\northwind\NorthWind.Win\bin\Debug\NorthWind.Logic.pdb

@@ -1,0 +1,12 @@
+C:\northwind\DocumentoService\bin\Debug\DocumentoService.dll.config
+C:\northwind\DocumentoService\bin\Debug\DocumentoService.dll
+C:\northwind\DocumentoService\bin\Debug\DocumentoService.pdb
+C:\northwind\DocumentoService\obj\Debug\DocumentoService.dll
+C:\northwind\DocumentoService\obj\Debug\DocumentoService.pdb
+C:\northwind\DocumentoService\bin\Debug\NorthWind.Entity.dll
+C:\northwind\DocumentoService\bin\Debug\NorthWind.Logic.dll
+C:\northwind\DocumentoService\bin\Debug\NorthWind.DAO.dll
+C:\northwind\DocumentoService\bin\Debug\NorthWind.Entity.pdb
+C:\northwind\DocumentoService\bin\Debug\NorthWind.Logic.pdb
+C:\northwind\DocumentoService\bin\Debug\NorthWind.DAO.pdb
+C:\northwind\DocumentoService\obj\Debug\DocumentoService.csprojResolveAssemblyReference.cache

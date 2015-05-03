@@ -1,0 +1,14 @@
+C:\northwind\DocumentoHostConsole\obj\Debug\DocumentoHostConsole.csprojResolveAssemblyReference.cache
+C:\northwind\DocumentoHostConsole\bin\Debug\DocumentoHostConsole.exe.config
+C:\northwind\DocumentoHostConsole\bin\Debug\DocumentoHostConsole.exe
+C:\northwind\DocumentoHostConsole\bin\Debug\DocumentoHostConsole.pdb
+C:\northwind\DocumentoHostConsole\bin\Debug\DocumentoService.dll
+C:\northwind\DocumentoHostConsole\bin\Debug\NorthWind.Entity.dll
+C:\northwind\DocumentoHostConsole\bin\Debug\NorthWind.Logic.dll
+C:\northwind\DocumentoHostConsole\bin\Debug\NorthWind.DAO.dll
+C:\northwind\DocumentoHostConsole\bin\Debug\DocumentoService.pdb
+C:\northwind\DocumentoHostConsole\bin\Debug\NorthWind.Entity.pdb
+C:\northwind\DocumentoHostConsole\bin\Debug\NorthWind.Logic.pdb
+C:\northwind\DocumentoHostConsole\bin\Debug\NorthWind.DAO.pdb
+C:\northwind\DocumentoHostConsole\obj\Debug\DocumentoHostConsole.exe
+C:\northwind\DocumentoHostConsole\obj\Debug\DocumentoHostConsole.pdb

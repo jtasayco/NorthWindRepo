@@ -1,5 +1,6 @@
-﻿using NorthWind.DAO;
+﻿
 using NorthWind.Entity;
+using NorthWind.Logic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +23,8 @@ namespace NorthWind.Win
 
         private void frmCategoria_Load(object sender, EventArgs e)
         {
-            Lista = TbCategoriaDAO.SelectAll();
+            //Lista = TbCategoriaDAO.SelectAll();
+            Lista = TbCategoriaBL.SelectAll();
             this.TbCategoriaBindingSource.DataSource = Lista;
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }

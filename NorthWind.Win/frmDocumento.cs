@@ -1,5 +1,6 @@
-﻿using NorthWind.DAO;
+﻿
 using NorthWind.Entity;
+using NorthWind.Logic;
 using NorthWind.Win.BL;
 using System;
 using System.Collections.Generic;
@@ -256,7 +257,8 @@ namespace NorthWind.Win
             //Agregamos el detalle al documento
             oDocumento.Detalle = oFacturaBL.GetDetalle();
             //Guardar en la base de datos
-            TbDocumentoDao documento = new TbDocumentoDao();
+            //TbDocumentoDao documento = new TbDocumentoDao();
+            TbDocumentoBL documento = new TbDocumentoBL();
             if(documento.GuardarDocumento(oDocumento) == eEstadoProceso.Correcto){
                 MessageBox.Show("Documento Guardado");
             }

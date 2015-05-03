@@ -1,5 +1,5 @@
-﻿using NorthWind.DAO;
-using NorthWind.Entity;
+﻿using NorthWind.Entity;
+using NorthWind.Logic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,8 +32,10 @@ namespace NorthWind.Win
         {
             //Lista = TbProductoBE.SelectAll();
             //Lista = TbProductoDAO.SelectAll();
-            listaProducto = TbProductoDAO.SelectAll();
-            listaCategoria = TbCategoriaDAO.SelectAll();
+            //listaProducto = TbProductoDAO.SelectAll();
+            listaProducto = TbProductoBL.SelectAll();
+            //listaCategoria = TbCategoriaDAO.SelectAll();
+            listaCategoria = TbCategoriaBL.SelectAll();
             //this.TbProductobindingSource.DataSource = Lista;
             //this.dataGridView1.SelectionMode =
             //    DataGridViewSelectionMode.FullRowSelect;
@@ -65,8 +67,10 @@ namespace NorthWind.Win
             //});
             //this.Close();
             //Se generara otra vez la lista
-            listaProducto = TbProductoDAO.SelectAll();
-            listaCategoria = TbCategoriaDAO.SelectAll();
+            //listaProducto = TbProductoDAO.SelectAll();
+            listaProducto = TbProductoBL.SelectAll();
+            //listaCategoria = TbCategoriaDAO.SelectAll();
+            listaCategoria = TbCategoriaBL.SelectAll();
             var listJoin = from prod in listaProducto
                            join cat in listaCategoria on prod.codCategoria equals cat.CodCategoria
                            select new { codProducto = prod.CodProducto, descripcion = prod.Descripcion, categoria = cat.Nombre, precio = prod.Precio,codCategoria = cat.CodCategoria };
@@ -101,8 +105,10 @@ namespace NorthWind.Win
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            listaProducto = TbProductoDAO.SelectAll();
-            listaCategoria = TbCategoriaDAO.SelectAll();
+            //listaProducto = TbProductoDAO.SelectAll();
+            listaProducto = TbProductoBL.SelectAll();
+            //listaCategoria = TbCategoriaDAO.SelectAll();
+            listaCategoria = TbCategoriaBL.SelectAll();
             var listJoin = from prod in listaProducto
                            join cat in listaCategoria on prod.codCategoria equals cat.CodCategoria
                            select new { codProducto = prod.CodProducto, descripcion = prod.Descripcion, categoria = cat.Nombre, precio = prod.Precio,codCategoria = cat.CodCategoria };
@@ -112,8 +118,10 @@ namespace NorthWind.Win
         private void btnButton_Click(object sender, EventArgs e)
         {
             this.dataGridView1.DataSource = null;
-            listaProducto = TbProductoDAO.SelectAll();
-            listaCategoria = TbCategoriaDAO.SelectAll();
+            //listaProducto = TbProductoDAO.SelectAll();
+            listaProducto = TbProductoBL.SelectAll();
+            //listaCategoria = TbCategoriaDAO.SelectAll();
+            listaCategoria = TbCategoriaBL.SelectAll();
             var listJoin = from prod in listaProducto
                            join cat in listaCategoria on prod.codCategoria equals cat.CodCategoria
                            select new { codProducto = prod.CodProducto, descripcion = prod.Descripcion, categoria = cat.Nombre, precio = prod.Precio, codCategoria = cat.CodCategoria };

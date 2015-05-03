@@ -1,17 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace NorthWind.Entity
 {
+    [DataContract]
     public class TbProductoBE:EventArgs
     {
+        [DataMember]
         public string CodProducto { get; set; }
+        [DataMember]
         public string Descripcion { get; set; }
+        [DataMember]
         public string Precio { get; set; }
         //para relacionarlo con las categorias
+        [DataMember]
         public int codCategoria { get; set; }
         //sobreescribiendo el metodo tostring
         public override string ToString()
