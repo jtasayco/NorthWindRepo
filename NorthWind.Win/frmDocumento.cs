@@ -185,44 +185,45 @@ namespace NorthWind.Win
                         list.Item = inicializa;
                         inicializa += 1;
                     });
-                    dataGridView1.DataSource = null;
-                    dataGridView1.DataSource = oFacturaBL.GetDetalle();
+                    
                 }
-            }
-            else
-            {
-                MessageBox.Show("No hay Detalles a Retirar");
-            }
-
-            List<ItemBE> itemIngresado = new List<ItemBE>();
-            itemIngresado = oFacturaBL.GetDetalle();
-
-            if (itemIngresado.Count > 0)
-            {
-                int i = dataGridView1.CurrentRow.Index;
-                string itemEliminar = dataGridView1.Rows[i].Cells[0].Value.ToString();
-                ItemBE oitemEliminar = (from item in itemIngresado.ToArray()
-                                        where item.Item == Convert.ToInt32(itemEliminar)
-                                        select item).Single();
-                itemIngresado.Remove(oitemEliminar);
-                //actualizando las posiciones de los items
-                int inicializa = 1;
-                itemIngresado.ForEach(list =>
-                {
-                    list.Item = inicializa;
-                    inicializa += 1;
-                });
-
-                //Actualizar DataGrid
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = itemIngresado;
-
-
+                dataGridView1.DataSource = oFacturaBL.GetDetalle();
             }
             else
             {
                 MessageBox.Show("No hay Detalles a Retirar");
             }
+
+            //List<ItemBE> itemIngresado = new List<ItemBE>();
+            //itemIngresado = oFacturaBL.GetDetalle();
+
+            //if (itemIngresado.Count > 0)
+            //{
+            //    int i = dataGridView1.CurrentRow.Index;
+            //    string itemEliminar = dataGridView1.Rows[i].Cells[0].Value.ToString();
+            //    ItemBE oitemEliminar = (from item in itemIngresado.ToArray()
+            //                            where item.Item == Convert.ToInt32(itemEliminar)
+            //                            select item).Single();
+            //    itemIngresado.Remove(oitemEliminar);
+            //    //actualizando las posiciones de los items
+            //    int inicializa = 1;
+            //    itemIngresado.ForEach(list =>
+            //    {
+            //        list.Item = inicializa;
+            //        inicializa += 1;
+            //    });
+
+            //    //Actualizar DataGrid
+            //    dataGridView1.DataSource = null;
+            //    dataGridView1.DataSource = itemIngresado;
+
+
+            //}
+            //else
+            //{
+            //    MessageBox.Show("No hay Detalles a Retirar");
+            //}
             
         }
 
