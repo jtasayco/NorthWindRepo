@@ -25,8 +25,9 @@ namespace NorthWind.Win
         {
             //Lista = TbCategoriaDAO.SelectAll();
             //Lista = TbCategoriaBL.SelectAll();
-            ProxyMantenimiento.ManServiceClient proxyCategoriaMantenimiento = new ProxyMantenimiento.ManServiceClient("HTTP_EndPoint");
-            Lista = proxyCategoriaMantenimiento.SelectAllFromCategoria().ToList();
+            //ProxyMantenimiento.ManServiceClient proxyMan = new ProxyMantenimiento.ManServiceClient("HTTP_EndPoint");
+            ProxyManIis.ManServiceClient proxyManIis = new ProxyManIis.ManServiceClient("BasicHttpBinding_IManService");
+            Lista = proxyManIis.SelectAllFromCategoria();
             this.TbCategoriaBindingSource.DataSource = Lista;
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }

@@ -26,3 +26,17 @@ C:\isil\NorthWindRepoRev2\DocumentoHostConsole\bin\Debug\NorthWind.DAO.pdb
 C:\isil\NorthWindRepoRev2\DocumentoHostConsole\obj\Debug\DocumentoHostConsole.csprojResolveAssemblyReference.cache
 C:\isil\NorthWindRepoRev2\DocumentoHostConsole\obj\Debug\DocumentoHostConsole.exe
 C:\isil\NorthWindRepoRev2\DocumentoHostConsole\obj\Debug\DocumentoHostConsole.pdb
+C:\northwind24\DocumentoHostConsole\bin\Debug\DocumentoHostConsole.exe.config
+C:\northwind24\DocumentoHostConsole\bin\Debug\DocumentoHostConsole.exe
+C:\northwind24\DocumentoHostConsole\bin\Debug\DocumentoHostConsole.pdb
+C:\northwind24\DocumentoHostConsole\bin\Debug\DocumentoService.dll
+C:\northwind24\DocumentoHostConsole\bin\Debug\NorthWind.Entity.dll
+C:\northwind24\DocumentoHostConsole\bin\Debug\NorthWind.Logic.dll
+C:\northwind24\DocumentoHostConsole\bin\Debug\NorthWind.DAO.dll
+C:\northwind24\DocumentoHostConsole\bin\Debug\DocumentoService.pdb
+C:\northwind24\DocumentoHostConsole\bin\Debug\NorthWind.Entity.pdb
+C:\northwind24\DocumentoHostConsole\bin\Debug\NorthWind.Logic.pdb
+C:\northwind24\DocumentoHostConsole\bin\Debug\NorthWind.DAO.pdb
+C:\northwind24\DocumentoHostConsole\obj\Debug\DocumentoHostConsole.csprojResolveAssemblyReference.cache
+C:\northwind24\DocumentoHostConsole\obj\Debug\DocumentoHostConsole.exe
+C:\northwind24\DocumentoHostConsole\obj\Debug\DocumentoHostConsole.pdb

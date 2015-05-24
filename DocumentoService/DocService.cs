@@ -16,7 +16,8 @@ namespace DocumentoService
         public void GuardarDocumento(DocumentoBE oDocumentoDTO)
         {
             TbDocumentoBL documento = new TbDocumentoBL();
-            documento.GuardarDocumento(oDocumentoDTO);
+            documento.GuardarDocumentoFromServiceLogic(oDocumentoDTO);
+            //documento.GuardarDocumento(oDocumentoDTO);
         }
     }
 }

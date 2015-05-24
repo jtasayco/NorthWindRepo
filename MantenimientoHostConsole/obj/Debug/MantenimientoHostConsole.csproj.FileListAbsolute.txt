@@ -26,3 +26,17 @@ C:\isil\NorthWindRepoRev2\MantenimientoHostConsole\bin\Debug\NorthWind.DAO.pdb
 C:\isil\NorthWindRepoRev2\MantenimientoHostConsole\obj\Debug\MantenimientoHostConsole.csprojResolveAssemblyReference.cache
 C:\isil\NorthWindRepoRev2\MantenimientoHostConsole\obj\Debug\MantenimientoHostConsole.exe
 C:\isil\NorthWindRepoRev2\MantenimientoHostConsole\obj\Debug\MantenimientoHostConsole.pdb
+C:\northwind24\MantenimientoHostConsole\bin\Debug\MantenimientoHostConsole.exe.config
+C:\northwind24\MantenimientoHostConsole\bin\Debug\MantenimientoHostConsole.exe
+C:\northwind24\MantenimientoHostConsole\bin\Debug\MantenimientoHostConsole.pdb
+C:\northwind24\MantenimientoHostConsole\bin\Debug\MantenimientoService.dll
+C:\northwind24\MantenimientoHostConsole\bin\Debug\NorthWind.Entity.dll
+C:\northwind24\MantenimientoHostConsole\bin\Debug\NorthWind.Logic.dll
+C:\northwind24\MantenimientoHostConsole\bin\Debug\NorthWind.DAO.dll
+C:\northwind24\MantenimientoHostConsole\bin\Debug\MantenimientoService.pdb
+C:\northwind24\MantenimientoHostConsole\bin\Debug\NorthWind.Entity.pdb
+C:\northwind24\MantenimientoHostConsole\bin\Debug\NorthWind.Logic.pdb
+C:\northwind24\MantenimientoHostConsole\bin\Debug\NorthWind.DAO.pdb
+C:\northwind24\MantenimientoHostConsole\obj\Debug\MantenimientoHostConsole.csprojResolveAssemblyReference.cache
+C:\northwind24\MantenimientoHostConsole\obj\Debug\MantenimientoHostConsole.exe
+C:\northwind24\MantenimientoHostConsole\obj\Debug\MantenimientoHostConsole.pdb

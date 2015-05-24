@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.Win", "NorthWind.Win\NorthWind.Win.csproj", "{F9325BD6-23B5-4BDC-9FA5-3D32DC43A6E4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4DDDE350-FA34-49D2-AF15-0EB01446C2BC} = {4DDDE350-FA34-49D2-AF15-0EB01446C2BC}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.Entity", "NorthWind.Entity\NorthWind.Entity.csproj", "{51FF19D0-ADCA-4AEB-A13D-569471DF68A0}"
 EndProject
@@ -24,6 +27,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MantenimientoHostConsole", "MantenimientoHostConsole\MantenimientoHostConsole.csproj", "{CCB68ACA-9F36-4A6D-B4BD-1D224B09644B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentoHostConsole", "DocumentoHostConsole\DocumentoHostConsole.csproj", "{81E8E6AA-A7B1-49F3-A159-147863572021}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceHostIis", "ServiceHostIis", "{83E67928-0DE4-4618-B44B-DD78AA1EC719}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MantenimientoHostIis", "MantenimientoHostIis\MantenimientoHostIis.csproj", "{4DDDE350-FA34-49D2-AF15-0EB01446C2BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +70,10 @@ Global
 		{81E8E6AA-A7B1-49F3-A159-147863572021}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81E8E6AA-A7B1-49F3-A159-147863572021}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81E8E6AA-A7B1-49F3-A159-147863572021}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DDDE350-FA34-49D2-AF15-0EB01446C2BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DDDE350-FA34-49D2-AF15-0EB01446C2BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DDDE350-FA34-49D2-AF15-0EB01446C2BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DDDE350-FA34-49D2-AF15-0EB01446C2BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,5 +85,6 @@ Global
 		{C26676D5-EFA7-453C-AC50-9182EA307755} = {2F221FE1-279E-46DF-AADD-8DDB0E85D577}
 		{CCB68ACA-9F36-4A6D-B4BD-1D224B09644B} = {CB112948-1DD8-436C-AAD7-F256E264572A}
 		{81E8E6AA-A7B1-49F3-A159-147863572021} = {CB112948-1DD8-436C-AAD7-F256E264572A}
+		{4DDDE350-FA34-49D2-AF15-0EB01446C2BC} = {83E67928-0DE4-4618-B44B-DD78AA1EC719}
 	EndGlobalSection
 EndGlobal

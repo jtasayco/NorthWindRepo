@@ -78,7 +78,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Service References\ProxyMantenimiento\Reference.cs">
+    <Compile Include="Service References\ProxyManIis\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -130,17 +130,17 @@
     <None Include="Service References\ProxyDocumento\documentoservice3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ProxyMantenimiento\ManService.wsdl" />
-    <None Include="Service References\ProxyMantenimiento\mantenimientoservice.xsd">
+    <None Include="Service References\ProxyManIis\ManService.wsdl" />
+    <None Include="Service References\ProxyManIis\Service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ProxyMantenimiento\mantenimientoservice1.xsd">
+    <None Include="Service References\ProxyManIis\Service11.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ProxyMantenimiento\mantenimientoservice2.xsd">
+    <None Include="Service References\ProxyManIis\Service12.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ProxyMantenimiento\mantenimientoservice3.xsd">
+    <None Include="Service References\ProxyManIis\Service13.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -164,7 +164,19 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ProxyDocumento\" />
-    <WCFMetadataStorage Include="Service References\ProxyMantenimiento\" />
+    <WCFMetadataStorage Include="Service References\ProxyManIis\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProxyManIis\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProxyManIis\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ProxyManIis\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ProxyDocumento\configuration91.svcinfo" />
@@ -174,18 +186,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ProxyDocumento\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ProxyMantenimiento\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ProxyMantenimiento\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ProxyMantenimiento\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

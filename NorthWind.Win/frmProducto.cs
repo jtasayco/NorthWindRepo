@@ -18,7 +18,7 @@ namespace NorthWind.Win
         //agregacion del evento
         public event EventHandler<TbProductoBE> onProductoSeleccionado;
 
-        ProxyMantenimiento.ManServiceClient proxyProdcat = new ProxyMantenimiento.ManServiceClient("HTTP_EndPoint");
+        ProxyManIis.ManServiceClient proxyProdcat = new ProxyManIis.ManServiceClient("BasicHttpBinding_IManService");
         //List<TbProductoBE> Lista = new List<TbProductoBE>();
         //Generamos 2 Listas Productos - Categoria
         List<TbProductoBE> listaProducto = new List<TbProductoBE>();
@@ -35,10 +35,10 @@ namespace NorthWind.Win
             //Lista = TbProductoDAO.SelectAll();
             //listaProducto = TbProductoDAO.SelectAll();
             //listaProducto = TbProductoBL.SelectAll();
-            listaProducto = proxyProdcat.SelectAllFromProducto().ToList();
+            listaProducto = proxyProdcat.SelectAllFromProducto();
             //listaCategoria = TbCategoriaDAO.SelectAll();
             //listaCategoria = TbCategoriaBL.SelectAll();
-            listaCategoria = proxyProdcat.SelectAllFromCategoria().ToList();
+            listaCategoria = proxyProdcat.SelectAllFromCategoria();
             //this.TbProductobindingSource.DataSource = Lista;
             //this.dataGridView1.SelectionMode =
             //    DataGridViewSelectionMode.FullRowSelect;
@@ -72,10 +72,10 @@ namespace NorthWind.Win
             //Se generara otra vez la lista
             //listaProducto = TbProductoDAO.SelectAll();
             //listaProducto = TbProductoBL.SelectAll();
-            listaProducto = proxyProdcat.SelectAllFromProducto().ToList();
+            listaProducto = proxyProdcat.SelectAllFromProducto();
             //listaCategoria = TbCategoriaDAO.SelectAll();
             //listaCategoria = TbCategoriaBL.SelectAll();
-            listaCategoria = proxyProdcat.SelectAllFromCategoria().ToList();
+            listaCategoria = proxyProdcat.SelectAllFromCategoria();
             var listJoin = from prod in listaProducto
                            join cat in listaCategoria on prod.codCategoria equals cat.CodCategoria
                            select new { codProducto = prod.CodProducto, descripcion = prod.Descripcion, categoria = cat.Nombre, precio = prod.Precio,codCategoria = cat.CodCategoria };
@@ -112,10 +112,10 @@ namespace NorthWind.Win
         {
             //listaProducto = TbProductoDAO.SelectAll();
             //listaProducto = TbProductoBL.SelectAll();
-            listaProducto = proxyProdcat.SelectAllFromProducto().ToList();
+            listaProducto = proxyProdcat.SelectAllFromProducto();
             //listaCategoria = TbCategoriaDAO.SelectAll();
             //listaCategoria = TbCategoriaBL.SelectAll();
-            listaCategoria = proxyProdcat.SelectAllFromCategoria().ToList();
+            listaCategoria = proxyProdcat.SelectAllFromCategoria();
             var listJoin = from prod in listaProducto
                            join cat in listaCategoria on prod.codCategoria equals cat.CodCategoria
                            select new { codProducto = prod.CodProducto, descripcion = prod.Descripcion, categoria = cat.Nombre, precio = prod.Precio,codCategoria = cat.CodCategoria };
@@ -127,10 +127,10 @@ namespace NorthWind.Win
             this.dataGridView1.DataSource = null;
             //listaProducto = TbProductoDAO.SelectAll();
             //listaProducto = TbProductoBL.SelectAll();
-            listaProducto = proxyProdcat.SelectAllFromProducto().ToList();
+            listaProducto = proxyProdcat.SelectAllFromProducto();
             //listaCategoria = TbCategoriaDAO.SelectAll();
             //listaCategoria = TbCategoriaBL.SelectAll();
-            listaCategoria = proxyProdcat.SelectAllFromCategoria().ToList();
+            listaCategoria = proxyProdcat.SelectAllFromCategoria();
             var listJoin = from prod in listaProducto
                            join cat in listaCategoria on prod.codCategoria equals cat.CodCategoria
                            select new { codProducto = prod.CodProducto, descripcion = prod.Descripcion, categoria = cat.Nombre, precio = prod.Precio, codCategoria = cat.CodCategoria };

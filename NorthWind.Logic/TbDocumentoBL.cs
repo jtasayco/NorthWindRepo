@@ -16,5 +16,12 @@ namespace NorthWind.Logic
             //TbDocumentoDao demo = new TbDocumentoDao();
             //demo.GuardarDocumento(oDocumentoDTO);
         }
+
+        public void GuardarDocumentoFromServiceLogic(DocumentoBE oDocumentoDTO)
+        {
+            TbDocumentoDao documento = new TbDocumentoDao();
+            documento.GuardarDocumentoFromService(oDocumentoDTO);
+        }
+
     }
 }

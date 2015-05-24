@@ -26,3 +26,10 @@ C:\isil\NorthWindRepoRev2\NorthWind.DAO\bin\Debug\NorthWind.Entity.pdb
 C:\isil\NorthWindRepoRev2\NorthWind.DAO\obj\Debug\NorthWind.DAO.csprojResolveAssemblyReference.cache
 C:\isil\NorthWindRepoRev2\NorthWind.DAO\obj\Debug\NorthWind.DAO.dll
 C:\isil\NorthWindRepoRev2\NorthWind.DAO\obj\Debug\NorthWind.DAO.pdb
+C:\northwind24\NorthWind.DAO\bin\Debug\NorthWind.DAO.dll
+C:\northwind24\NorthWind.DAO\bin\Debug\NorthWind.DAO.pdb
+C:\northwind24\NorthWind.DAO\bin\Debug\NorthWind.Entity.dll
+C:\northwind24\NorthWind.DAO\bin\Debug\NorthWind.Entity.pdb
+C:\northwind24\NorthWind.DAO\obj\Debug\NorthWind.DAO.csprojResolveAssemblyReference.cache
+C:\northwind24\NorthWind.DAO\obj\Debug\NorthWind.DAO.dll
+C:\northwind24\NorthWind.DAO\obj\Debug\NorthWind.DAO.pdb

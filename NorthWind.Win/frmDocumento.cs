@@ -262,7 +262,7 @@ namespace NorthWind.Win
             /*if(documento.GuardarDocumento(oDocumento) == eEstadoProceso.Correcto){
                 MessageBox.Show("Documento Guardado");
             }*/
-            ProxyDocumento.DocServiceClient proxyDoc = new ProxyDocumento.DocServiceClient("MSMQ_EndPoint");
+            ProxyDocumento.DocServiceClient proxyDoc = new ProxyDocumento.DocServiceClient("EndPoint_MSMQ");
             proxyDoc.GuardarDocumento(oDocumento);
             MessageBox.Show("Documento Guardado");
         }

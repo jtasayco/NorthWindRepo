@@ -1,0 +1,14 @@
+C:\northwind24\MantenimientoHostIis\bin\MantenimientoHostIis.dll.config
+C:\northwind24\MantenimientoHostIis\bin\MantenimientoHostIis.dll
+C:\northwind24\MantenimientoHostIis\bin\MantenimientoHostIis.pdb
+C:\northwind24\MantenimientoHostIis\bin\MantenimientoService.dll
+C:\northwind24\MantenimientoHostIis\bin\NorthWind.Entity.dll
+C:\northwind24\MantenimientoHostIis\bin\NorthWind.Logic.dll
+C:\northwind24\MantenimientoHostIis\bin\NorthWind.DAO.dll
+C:\northwind24\MantenimientoHostIis\bin\MantenimientoService.pdb
+C:\northwind24\MantenimientoHostIis\bin\NorthWind.Entity.pdb
+C:\northwind24\MantenimientoHostIis\bin\NorthWind.Logic.pdb
+C:\northwind24\MantenimientoHostIis\bin\NorthWind.DAO.pdb
+C:\northwind24\MantenimientoHostIis\obj\Debug\MantenimientoHostIis.csprojResolveAssemblyReference.cache
+C:\northwind24\MantenimientoHostIis\obj\Debug\MantenimientoHostIis.dll
+C:\northwind24\MantenimientoHostIis\obj\Debug\MantenimientoHostIis.pdb
