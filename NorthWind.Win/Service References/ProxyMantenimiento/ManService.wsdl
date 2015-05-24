@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ManService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="TCP_EndPoint_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8080/mantenimientoservice?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8080/mantenimientoservice?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8080/mantenimientoservice?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/NorthWind.Entity" />
+      <xsd:import schemaLocation="http://localhost:8080/mantenimientoservice?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IManService_SelectAllFromCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllFromCliente" />
+  </wsdl:message>
+  <wsdl:message name="IManService_SelectAllFromCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllFromClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IManService_SelectAllFromCategoria_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllFromCategoria" />
+  </wsdl:message>
+  <wsdl:message name="IManService_SelectAllFromCategoria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllFromCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IManService_SelectAllFromProducto_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllFromProducto" />
+  </wsdl:message>
+  <wsdl:message name="IManService_SelectAllFromProducto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllFromProductoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IManService">
+    <wsdl:operation name="SelectAllFromCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManService/SelectAllFromCliente" message="tns:IManService_SelectAllFromCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IManService/SelectAllFromClienteResponse" message="tns:IManService_SelectAllFromCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllFromCategoria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManService/SelectAllFromCategoria" message="tns:IManService_SelectAllFromCategoria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IManService/SelectAllFromCategoriaResponse" message="tns:IManService_SelectAllFromCategoria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllFromProducto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManService/SelectAllFromProducto" message="tns:IManService_SelectAllFromProducto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IManService/SelectAllFromProductoResponse" message="tns:IManService_SelectAllFromProducto_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HTTP_EndPoint" type="tns:IManService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SelectAllFromCliente">
+      <soap:operation soapAction="http://tempuri.org/IManService/SelectAllFromCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllFromCategoria">
+      <soap:operation soapAction="http://tempuri.org/IManService/SelectAllFromCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllFromProducto">
+      <soap:operation soapAction="http://tempuri.org/IManService/SelectAllFromProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TCP_EndPoint" type="tns:IManService">
+    <wsp:PolicyReference URI="#TCP_EndPoint_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="SelectAllFromCliente">
+      <soap12:operation soapAction="http://tempuri.org/IManService/SelectAllFromCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllFromCategoria">
+      <soap12:operation soapAction="http://tempuri.org/IManService/SelectAllFromCategoria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllFromProducto">
+      <soap12:operation soapAction="http://tempuri.org/IManService/SelectAllFromProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ManService">
+    <wsdl:port name="HTTP_EndPoint" binding="tns:HTTP_EndPoint">
+      <soap:address location="http://localhost:8080/mantenimientoservice" />
+    </wsdl:port>
+    <wsdl:port name="TCP_EndPoint" binding="tns:TCP_EndPoint">
+      <soap12:address location="net.tcp://localhost:8081/mantenimientoservice" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:8081/mantenimientoservice</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Upn>WIN-M55IMNG9PVB\Administrador</Upn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

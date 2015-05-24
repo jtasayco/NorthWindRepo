@@ -7,3 +7,12 @@ C:\northwind\NorthWind.Logic\bin\Debug\NorthWind.DAO.dll
 C:\northwind\NorthWind.Logic\bin\Debug\NorthWind.Entity.dll
 C:\northwind\NorthWind.Logic\bin\Debug\NorthWind.DAO.pdb
 C:\northwind\NorthWind.Logic\bin\Debug\NorthWind.Entity.pdb
+C:\isil\NorthWindRepoRev2\NorthWind.Logic\bin\Debug\NorthWind.Logic.dll
+C:\isil\NorthWindRepoRev2\NorthWind.Logic\bin\Debug\NorthWind.Logic.pdb
+C:\isil\NorthWindRepoRev2\NorthWind.Logic\bin\Debug\NorthWind.DAO.dll
+C:\isil\NorthWindRepoRev2\NorthWind.Logic\bin\Debug\NorthWind.Entity.dll
+C:\isil\NorthWindRepoRev2\NorthWind.Logic\bin\Debug\NorthWind.DAO.pdb
+C:\isil\NorthWindRepoRev2\NorthWind.Logic\bin\Debug\NorthWind.Entity.pdb
+C:\isil\NorthWindRepoRev2\NorthWind.Logic\obj\Debug\NorthWind.Logic.csprojResolveAssemblyReference.cache
+C:\isil\NorthWindRepoRev2\NorthWind.Logic\obj\Debug\NorthWind.Logic.dll
+C:\isil\NorthWindRepoRev2\NorthWind.Logic\obj\Debug\NorthWind.Logic.pdb

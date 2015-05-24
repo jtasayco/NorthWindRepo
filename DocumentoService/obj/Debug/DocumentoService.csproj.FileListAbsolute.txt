@@ -10,3 +10,15 @@ C:\northwind\DocumentoService\bin\Debug\NorthWind.Entity.pdb
 C:\northwind\DocumentoService\bin\Debug\NorthWind.Logic.pdb
 C:\northwind\DocumentoService\bin\Debug\NorthWind.DAO.pdb
 C:\northwind\DocumentoService\obj\Debug\DocumentoService.csprojResolveAssemblyReference.cache
+C:\isil\NorthWindRepoRev2\DocumentoService\bin\Debug\DocumentoService.dll.config
+C:\isil\NorthWindRepoRev2\DocumentoService\bin\Debug\DocumentoService.dll
+C:\isil\NorthWindRepoRev2\DocumentoService\bin\Debug\DocumentoService.pdb
+C:\isil\NorthWindRepoRev2\DocumentoService\bin\Debug\NorthWind.Entity.dll
+C:\isil\NorthWindRepoRev2\DocumentoService\bin\Debug\NorthWind.Logic.dll
+C:\isil\NorthWindRepoRev2\DocumentoService\bin\Debug\NorthWind.DAO.dll
+C:\isil\NorthWindRepoRev2\DocumentoService\bin\Debug\NorthWind.Entity.pdb
+C:\isil\NorthWindRepoRev2\DocumentoService\bin\Debug\NorthWind.Logic.pdb
+C:\isil\NorthWindRepoRev2\DocumentoService\bin\Debug\NorthWind.DAO.pdb
+C:\isil\NorthWindRepoRev2\DocumentoService\obj\Debug\DocumentoService.csprojResolveAssemblyReference.cache
+C:\isil\NorthWindRepoRev2\DocumentoService\obj\Debug\DocumentoService.dll
+C:\isil\NorthWindRepoRev2\DocumentoService\obj\Debug\DocumentoService.pdb

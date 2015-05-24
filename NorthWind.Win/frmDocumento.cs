@@ -259,9 +259,12 @@ namespace NorthWind.Win
             //Guardar en la base de datos
             //TbDocumentoDao documento = new TbDocumentoDao();
             TbDocumentoBL documento = new TbDocumentoBL();
-            if(documento.GuardarDocumento(oDocumento) == eEstadoProceso.Correcto){
+            /*if(documento.GuardarDocumento(oDocumento) == eEstadoProceso.Correcto){
                 MessageBox.Show("Documento Guardado");
-            }
+            }*/
+            ProxyDocumento.DocServiceClient proxyDoc = new ProxyDocumento.DocServiceClient("MSMQ_EndPoint");
+            proxyDoc.GuardarDocumento(oDocumento);
+            MessageBox.Show("Documento Guardado");
         }
 
         private void button6_Click(object sender, EventArgs e)

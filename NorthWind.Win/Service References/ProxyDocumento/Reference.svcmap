@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0bb5a6d9-e8eb-4f08-b779-d4ec4aa944ec" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8000/documentoservice" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="documentoservice.xsd" MetadataType="Schema" ID="32fd9688-fb09-451e-bb8d-398d52a02fec" SourceId="1" SourceUrl="http://localhost:8000/documentoservice?xsd=xsd0" />
+    <MetadataFile FileName="documentoservice1.xsd" MetadataType="Schema" ID="65d652cc-fabd-4263-8e80-de69eb9bd09f" SourceId="1" SourceUrl="http://localhost:8000/documentoservice?xsd=xsd3" />
+    <MetadataFile FileName="documentoservice2.xsd" MetadataType="Schema" ID="0d429822-32a2-4f53-a41e-fce468d35809" SourceId="1" SourceUrl="http://localhost:8000/documentoservice?xsd=xsd2" />
+    <MetadataFile FileName="DocService.wsdl" MetadataType="Wsdl" ID="d5d1413d-30d5-444e-82cc-612ba0f89200" SourceId="1" SourceUrl="http://localhost:8000/documentoservice" />
+    <MetadataFile FileName="documentoservice3.xsd" MetadataType="Schema" ID="f5368385-91c2-4f15-8e5f-594b7b10996b" SourceId="1" SourceUrl="http://localhost:8000/documentoservice?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

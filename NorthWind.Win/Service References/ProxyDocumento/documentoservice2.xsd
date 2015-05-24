@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/NorthWind.Entity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/NorthWind.Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8000/documentoservice?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:complexType name="DocumentoBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cabecera" nillable="true" type="tns:CabDocumentoBE" />
+      <xs:element minOccurs="0" name="Detalle" nillable="true" type="tns:ArrayOfItemBE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentoBE" nillable="true" type="tns:DocumentoBE" />
+  <xs:complexType name="CabDocumentoBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cliente" nillable="true" type="tns:TbClienteBE" />
+      <xs:element minOccurs="0" name="CodDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaHora" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IGV" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SubTotal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TipoDocumento" type="tns:eTipoDocumento" />
+      <xs:element minOccurs="0" name="Total" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CabDocumentoBE" nillable="true" type="tns:CabDocumentoBE" />
+  <xs:complexType name="TbClienteBE">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System" base="q1:EventArgs">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodCliente" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ruc" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TbClienteBE" nillable="true" type="tns:TbClienteBE" />
+  <xs:simpleType name="eTipoDocumento">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Nothing" />
+      <xs:enumeration value="Factura" />
+      <xs:enumeration value="Boleta" />
+      <xs:enumeration value="GuiaRemision" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="eTipoDocumento" nillable="true" type="tns:eTipoDocumento" />
+  <xs:complexType name="ArrayOfItemBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ItemBE" nillable="true" type="tns:ItemBE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfItemBE" nillable="true" type="tns:ArrayOfItemBE" />
+  <xs:complexType name="ItemBE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="CodDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoDetalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Item" type="xs:int" />
+      <xs:element minOccurs="0" name="Precio" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Producto" nillable="true" type="tns:TbProductoBE" />
+      <xs:element minOccurs="0" name="Total" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemBE" nillable="true" type="tns:ItemBE" />
+  <xs:complexType name="TbProductoBE">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/System" base="q2:EventArgs">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodProducto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Precio" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="codCategoria" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TbProductoBE" nillable="true" type="tns:TbProductoBE" />
+</xs:schema>

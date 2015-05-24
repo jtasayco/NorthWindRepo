@@ -13,9 +13,10 @@ namespace DocumentoService
     public class DocService : IDocService
     {
 
-        public eEstadoProceso GuardarDocumento(DocumentoBE oDocumentoDTO)
+        public void GuardarDocumento(DocumentoBE oDocumentoDTO)
         {
-            return new TbDocumentoBL().GuardarDocumento(oDocumentoDTO);
+            TbDocumentoBL documento = new TbDocumentoBL();
+            documento.GuardarDocumento(oDocumentoDTO);
         }
     }
 }

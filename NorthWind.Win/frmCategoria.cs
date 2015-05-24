@@ -24,7 +24,9 @@ namespace NorthWind.Win
         private void frmCategoria_Load(object sender, EventArgs e)
         {
             //Lista = TbCategoriaDAO.SelectAll();
-            Lista = TbCategoriaBL.SelectAll();
+            //Lista = TbCategoriaBL.SelectAll();
+            ProxyMantenimiento.ManServiceClient proxyCategoriaMantenimiento = new ProxyMantenimiento.ManServiceClient("HTTP_EndPoint");
+            Lista = proxyCategoriaMantenimiento.SelectAllFromCategoria().ToList();
             this.TbCategoriaBindingSource.DataSource = Lista;
             this.dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }

@@ -15,7 +15,7 @@ namespace DocumentoHostConsole
     {
         static void Main(string[] args)
         {
-            string qName = ConfigurationSettings.AppSettings["ColaDocumento"];
+            string qName = ConfigurationSettings.AppSettings["queueName"];
             //string qName = ConfigurationManager.AppSettings["ColaDocumento"];
             if (!MessageQueue.Exists(qName))
             {

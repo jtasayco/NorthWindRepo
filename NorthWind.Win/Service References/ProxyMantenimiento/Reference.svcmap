@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1648c7a3-3415-4d39-802f-4828c2d9f533" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8080/mantenimientoservice" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="mantenimientoservice.xsd" MetadataType="Schema" ID="53649d97-c1bd-4c9a-8328-0936da1a22e7" SourceId="1" SourceUrl="http://localhost:8080/mantenimientoservice?xsd=xsd3" />
+    <MetadataFile FileName="mantenimientoservice1.xsd" MetadataType="Schema" ID="cc76ae3e-acb3-4f2b-8e35-86faf5a3a73a" SourceId="1" SourceUrl="http://localhost:8080/mantenimientoservice?xsd=xsd1" />
+    <MetadataFile FileName="mantenimientoservice2.xsd" MetadataType="Schema" ID="08fed699-d2ad-4759-a519-0680fc27fb87" SourceId="1" SourceUrl="http://localhost:8080/mantenimientoservice?xsd=xsd0" />
+    <MetadataFile FileName="ManService.wsdl" MetadataType="Wsdl" ID="607390ad-7f2a-4d78-8b1b-bd292c79c313" SourceId="1" SourceUrl="http://localhost:8080/mantenimientoservice" />
+    <MetadataFile FileName="mantenimientoservice3.xsd" MetadataType="Schema" ID="4bc1337c-31bf-4fcd-a142-2db3a9e46959" SourceId="1" SourceUrl="http://localhost:8080/mantenimientoservice?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

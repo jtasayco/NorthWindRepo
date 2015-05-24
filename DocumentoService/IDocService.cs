@@ -12,8 +12,8 @@ namespace DocumentoService
     [ServiceContract]
     public interface IDocService
     {
-        [OperationContract]
-        eEstadoProceso GuardarDocumento(DocumentoBE oDocumentoDTO);
+        [OperationContract(IsOneWay=true)]
+        void GuardarDocumento(DocumentoBE oDocumentoDTO);
     }
 
 }

@@ -28,7 +28,9 @@ namespace NorthWind.Win
         {
             //Lista = TbClienteBE.SelectAll(); anterior
             //Lista = TbClienteDao.SelectAll();
-            Lista = TbClienteBL.SelectAll();
+            //Lista = TbClienteBL.SelectAll();
+            ProxyMantenimiento.ManServiceClient proxyManCLiente = new ProxyMantenimiento.ManServiceClient("HTTP_EndPoint");
+            Lista = proxyManCLiente.SelectAllFromCliente().ToList();
             TbClientebindingSource.DataSource = Lista;
             this.dataGridView1.SelectionMode = 
                 DataGridViewSelectionMode.FullRowSelect;

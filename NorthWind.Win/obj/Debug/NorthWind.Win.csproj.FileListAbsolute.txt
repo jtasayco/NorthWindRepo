@@ -79,3 +79,5 @@ C:\isil\NorthWindRepoRev2\NorthWind.Win\obj\Debug\NorthWind.Win.csproj.GenerateR
 C:\northwind\NorthWind.Win\obj\Debug\NorthWind.Win.frmCategoria.resources
 C:\northwind\NorthWind.Win\bin\Debug\NorthWind.Logic.dll
 C:\northwind\NorthWind.Win\bin\Debug\NorthWind.Logic.pdb
+C:\isil\NorthWindRepoRev2\NorthWind.Win\bin\Debug\NorthWind.Logic.dll
+C:\isil\NorthWindRepoRev2\NorthWind.Win\bin\Debug\NorthWind.Logic.pdb

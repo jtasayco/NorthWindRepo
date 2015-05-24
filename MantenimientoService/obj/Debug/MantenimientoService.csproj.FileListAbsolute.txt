@@ -10,3 +10,15 @@ C:\northwind\MantenimientoService\bin\Debug\NorthWind.DAO.dll
 C:\northwind\MantenimientoService\bin\Debug\NorthWind.Entity.pdb
 C:\northwind\MantenimientoService\bin\Debug\NorthWind.Logic.pdb
 C:\northwind\MantenimientoService\bin\Debug\NorthWind.DAO.pdb
+C:\isil\NorthWindRepoRev2\MantenimientoService\bin\Debug\MantenimientoService.dll.config
+C:\isil\NorthWindRepoRev2\MantenimientoService\bin\Debug\MantenimientoService.dll
+C:\isil\NorthWindRepoRev2\MantenimientoService\bin\Debug\MantenimientoService.pdb
+C:\isil\NorthWindRepoRev2\MantenimientoService\bin\Debug\NorthWind.Entity.dll
+C:\isil\NorthWindRepoRev2\MantenimientoService\bin\Debug\NorthWind.Logic.dll
+C:\isil\NorthWindRepoRev2\MantenimientoService\bin\Debug\NorthWind.DAO.dll
+C:\isil\NorthWindRepoRev2\MantenimientoService\bin\Debug\NorthWind.Entity.pdb
+C:\isil\NorthWindRepoRev2\MantenimientoService\bin\Debug\NorthWind.Logic.pdb
+C:\isil\NorthWindRepoRev2\MantenimientoService\bin\Debug\NorthWind.DAO.pdb
+C:\isil\NorthWindRepoRev2\MantenimientoService\obj\Debug\MantenimientoService.csprojResolveAssemblyReference.cache
+C:\isil\NorthWindRepoRev2\MantenimientoService\obj\Debug\MantenimientoService.dll
+C:\isil\NorthWindRepoRev2\MantenimientoService\obj\Debug\MantenimientoService.pdb
